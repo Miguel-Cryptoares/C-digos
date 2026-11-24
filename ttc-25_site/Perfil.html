@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil | SGEE</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Utilizando o mesmo CSS base do projeto -->
+    <link rel="stylesheet" href="./CSS/Inicial.css">
+    <link rel="stylesheet" href="./CSS/Perfil.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="logo-brand">
+                    <div class="logo-icon">🎓</div>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 0.375rem;">
+                            <span style="font-size: 1.25rem; font-weight: 800; color: #fff; letter-spacing: -0.025em;">SGEE</span>
+                            <span class="brand-badge">COORDENAÇÃO</span>
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500; display: block;">Sistema de Gerenciamento de Eventos Escolares</span>
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="buscaEventos" placeholder="Buscar por evento...">
+                </div>
+
+                <div class="user-actions">
+                    <button class="btn-bell">
+                        <i class="fa-regular fa-bell" style="font-size: 1.125rem;"></i>
+                        <span class="bell-dot"></span>
+                    </button>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <img id="avatarTopo" class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" alt="Foto do Usuário" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--red-brand, #990000);">
+                        <div>
+                            <div style="font-size: 0.875rem; font-weight: 600; color: #f8fafc; line-height: 1.25;" id="nomeUsuario">Coordenação</div>
+                            <div style="font-size: 0.75rem; color: #f87171; font-weight: 500;">Gestor(a) Escolar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-nav">
+            <div class="nav-container">
+                <nav class="nav-links">
+                    <a href="Inicial.html" class="nav-link"><i class="fa-solid fa-chart-pie"></i> Visão Geral</a>
+                    <a href="Calendário.html" class="nav-link"><i class="fa-regular fa-calendar-days"></i> Calendário da Escola</a>
+                    <a href="Perfil.html" class="nav-link active"><i class="fa-solid fa-user-gear"></i> Editar Perfil</a>
+                    <a href="index.html" class="nav-link logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="page-title-bar">
+            <div>
+                <div style="font-size: 0.875rem; color: #94a3b8; margin-bottom: 0.5rem;">
+                    <i class="fa-solid fa-user-shield" style="color: #990000;"></i> Configurações da Conta
+                </div>
+                <h1 style="font-size: 1.875rem; font-weight: 800; letter-spacing: -0.025em;">Editar Perfil</h1>
+                <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.25rem;">Atualize o seu nome de exibição e altere a foto do perfil do sistema.</p>
+            </div>
+        </div>
+
+        <div class="profile-container">
+            <section class="card-panel">
+                <form id="formPerfil" enctype="multipart/form-data">
+                    <div class="avatar-upload-container">
+                        <div class="avatar-preview-wrapper">
+                            <img id="previewFoto" class="avatar-preview" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" alt="Foto de perfil">
+                            <label for="inputFoto" class="btn-upload-avatar" title="Alterar Foto">
+                                <i class="fa-solid fa-camera" style="font-size: 1rem;"></i>
+                            </label>
+                            <input type="file" id="inputFoto" name="foto" accept="image/*">
+                        </div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted);">Clique no ícone da câmara para escolher uma nova imagem</span>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="nome" style="display: block; font-size: 0.75rem; font-weight: 600; color: #cbd5e1; margin-bottom: 0.375rem;">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" class="form-control" style="width: 100%; padding: 0.625rem 1rem; background-color: var(--bg-input); border: 1px solid var(--border-color); border-radius: 0.75rem; color: var(--text-main); font-size: 0.875rem; outline: none;" required>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; justify-content: flex-end; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+                        <a href="Inicial.php" class="btn-secondary" style="text-decoration: none; padding: 0.625rem 1rem; border-radius: 0.75rem; font-size: 0.875rem; font-weight: 500;">Cancelar</a>
+                        <button type="submit" class="btn-primary" style="padding: 0.625rem 1.25rem; border-radius: 0.75rem; font-size: 0.875rem;">Salvar Alterações</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <span style="font-weight: 700; color: #fff;">SGEE</span>
+                <span>&copy; 2026 Módulo da Coordenação.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de manipulação do perfil -->
+    <script src="./JS/Perfil.js"></script>
+</body>
+</html>

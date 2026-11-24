@@ -1,0 +1,121 @@
+    body {
+            background: radial-gradient(circle at 80% 20%, #1e1b4b 0%, #0f172a 45%, #020617 100%);
+            color: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Efeito Glow / Luz no fundo */
+        .glow-bg {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(225, 29, 72, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Card de Cadastro Glassmorphism */
+        .cadastro-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 
+                        0 0 35px rgba(225, 29, 72, 0.08);
+        }
+
+        /* Estilização Customizada dos Campos */
+        .input-group {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            transition: color 0.2s ease;
+        }
+
+        .custom-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.75rem;
+            background-color: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            color: #f8fafc;
+            font-size: 0.875rem;
+            outline: none;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .custom-input:focus {
+            border-color: #f43f5e;
+            background-color: rgba(2, 6, 23, 0.9);
+            box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.2);
+        }
+
+        .custom-input:focus + .input-icon,
+        .input-group:focus-within .input-icon {
+            color: #f43f5e;
+        }
+
+        /* Ajuste do Select */
+        select.custom-input {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        select.custom-input option {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        /* Botão de Exibir/Ocultar Senha */
+        .toggle-password {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .toggle-password:hover {
+            color: #f8fafc;
+        }
+
+        /* Estilização dos Botões */
+        .btn-submit {
+            background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 20px -4px rgba(225, 29, 72, 0.4);
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px -4px rgba(225, 29, 72, 0.6);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .btn-voltar {
+            background-color: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.25s ease;
+        }
+
+        .btn-voltar:hover {
+            background-color: rgba(51, 65, 85, 0.9);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }

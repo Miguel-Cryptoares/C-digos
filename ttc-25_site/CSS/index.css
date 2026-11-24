@@ -1,0 +1,90 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+    }
+
+    .esquerda {
+        width: 45%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(28, 28, 165);
+        background-image: url("/IMG/logo2.png");
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+
+    .direita {
+        width: 55%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(0, 0, 120);
+        background-image: url("/IMG/Evento.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .login {
+        width: 400px;
+        padding: 40px;
+        text-align: center;
+        border-radius: 15px;
+        background-color: white;
+    }
+
+    .login h1 {
+        margin-bottom: 25px;
+        font-family: 'Times New Roman';
+    }
+
+    .login input {
+        width: 100%;
+        padding: 14px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+    }
+
+    .login button {
+        width: 100%;
+        border: none;
+        padding: 12px;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: blue;
+        margin-bottom: 10px;
+    }
+
+    .login button:hover {
+        background-color: darkblue;
+    }
+
+    .cadastro {
+        background-color: white !important;
+        color: blue !important;
+        border: 1px solid blue !important;
+    }
+
+    .cadastro:hover {
+        background-color: #eeeeee !important;
+    }
+
+    .mensagem {
+        margin-top: 10px;
+    }
+
+    .imagem {
+        width: 200px;
+        margin-top: 40px;
+    }
